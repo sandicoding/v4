@@ -18,8 +18,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "prepare": "yarn run snyk-protect && husky install",
+    "lint-staged": "lint-staged",
+    "snyk-protect": "snyk-protect"
   },
   "lint-staged": {
     "*.{js,css,json,md}": [
@@ -49,7 +50,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
@@ -58,7 +59,8 @@
     "react-transition-group": "^4.3.0",
     "scrollreveal": "^4.0.5",
     "smooth-scroll": "^16.1.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@upstatement/eslint-config": "0.4.3",
@@ -72,5 +74,6 @@
     "husky": "^6.0.0",
     "lint-staged": "^10.1.2",
     "prettier": "^2.0.4"
-  }
+  },
+  "snyk": true
 }
